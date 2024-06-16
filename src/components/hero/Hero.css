@@ -1,0 +1,189 @@
+@keyframes dance {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+  40% {
+    transform: translateY(5px) rotate(5deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(-3deg);
+  }
+  80% {
+    transform: translateY(3px) rotate(3deg);
+  }
+}
+
+.Card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 450px;
+  margin: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: rgba(255, 255, 255, 0.5) 1px solid;
+  border-left: rgba(255, 255, 255, 0.5) 1px solid;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.Card:hover {
+  transform: translateY(-10px);
+}
+
+.Card:hover > .content {
+  animation: dance 0.5s ease-in-out;
+}
+
+.Card .content {
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Card .content h2 {
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.Card .content h3 {
+  font-size: 1.8em;
+  color: #000; /* Changed color for better readability */
+  z-index: 1;
+}
+
+.Card .content p {
+  font-size: 1em;
+  color: #000; /* Changed color for better readability */
+  font-weight: 300;
+}
+
+.Card .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: 900;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: 900;
+  margin-top: 15px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .bg-light {
+    padding: 0px;
+    margin: 0;
+  }
+  .Card {
+    width: 300px;
+    height: auto;
+  }
+
+  .Card .content h3 {
+    font-size: 1.2 rem;
+  }
+
+  .Card .content p {
+    font-size: 1 rem;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Container {
+    flex-direction: column;
+  }
+
+  .Card {
+    max-width: 80%;
+  }
+
+  .Card .content h2 {
+    font-size: 6em;
+  }
+
+  .Card .content h3 {
+    font-size: 1.5em;
+  }
+
+  .Card .content p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .Container {
+    flex-direction: column;
+  }
+
+  .Card {
+    max-width: 100%;
+  }
+
+  .Card .content h2 {
+    font-size: 4em;
+  }
+
+  .Card .content h3 {
+    font-size: 1.2em;
+  }
+
+  .Card .content p {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Card {
+    padding: 40px !important;
+    width: 900px !important;
+    height: auto;
+  }
+
+  .Card .content h2 {
+    font-size: 4em;
+  }
+
+  .Card .content h3 {
+    font-size: 1.5em;
+  }
+
+  .Card .content p {
+    font-size: 1.2em;
+  }
+}

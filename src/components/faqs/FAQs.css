@@ -1,0 +1,9 @@
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: none;
+}
+
+button:focus {
+  background-color: none !important;
+}

@@ -1,0 +1,25 @@
+#product-img {
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  #product-img {
+    height: 250px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  #product-img {
+    height: 450px !important;
+  }
+
+  h4.text-dark {
+    font-size: 43px !important;
+  }
+  #products {
+    padding: 30px !important;
+  }
+  p.text-dark {
+    font-size: 25px !important;
+  }
+}

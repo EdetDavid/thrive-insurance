@@ -1,0 +1,15 @@
+.box {
+  /* background-image: linear-gradient(to right, #cc2b5e, #753a88); */
+  background-color: #ed1c24;
+  padding: 1px;
+  width: calc(100% - 15px);
+  margin-bottom: 2px;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  overflow-x: hidden !important;
+}

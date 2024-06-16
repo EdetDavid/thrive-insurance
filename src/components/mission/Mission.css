@@ -1,0 +1,57 @@
+.mission-text-container {
+  background-color: white;
+  color: #181344;
+  text-align: justify;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.mission-text {
+  font-size: 2rem !important;
+}
+
+#mission_wrapper .img-fluid {
+  max-width: 500px !important;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .mission-text-container {
+    width: 100%;
+    padding: 15px;
+  }
+  .mission-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #mission_wrapper .lead {
+    font-size: medium !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #mission_wrapper .img-fluid {
+    height: 300px !important;
+    margin: 0 !important;
+  }
+  #mission_wrapper .lead {
+    font-size: small !important;
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  #mission_wrapper .lead {
+    font-size: 1.5em !important;
+  }
+
+  #mission_wrapper .img-fluid {
+    height: 500px !important;
+    margin: 0 !important;
+  }
+}
