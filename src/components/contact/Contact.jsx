@@ -1,16 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Button } from "react-bootstrap";
+import { Modal } from "react-responsive-modal";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import color from "../../config/colors";
 
 import "./Contact.css";
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("first_name", firstName);
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("message", message);
+
+    try {
+      setSubmitting(true);
+
+      const response = await fetch(
+        "https://thrivenig-backend.onrender.com/api/contact/",
+        // "http://localhost:8000/api/contact/",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (response.ok) {
+        setFirstName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setShowSuccessModal(true);
+      } else {
+        alert("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+  };
   return (
     <section
-      data-aos="fade-up"
       id="contact"
-      data-aos-easing="linear"
       className="text-center text-white"
       style={{ maxWidth: "100%" }}
     >
@@ -20,7 +68,12 @@ const Contact = () => {
         className="row  mx-auto black-shadow p-4"
       >
         {/* Start */}
-        <div id="contactForm" className="d-flex   mx-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          id="contactForm"
+          className="d-flex   mx-auto"
+        >
           <div className="col-lg-5 mb-4 mb-lg-0">
             <div className="embed-responsive embed-responsive-16by9">
               <iframe
@@ -36,7 +89,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-lg-7">
-            <form className="d-flex flex-column p-3">
+            <form className="d-flex flex-column p-3" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-md-6 mb-4">
                   <div className="form-outline">
@@ -44,12 +97,15 @@ const Contact = () => {
                       type="text"
                       id="formFirstName"
                       className="form-control border-white border"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
                     />
                     <label
                       className="form-label text-white "
                       htmlFor="formFirstName"
                     >
-                      First name
+                      Name
                     </label>
                   </div>
                 </div>
@@ -59,6 +115,9 @@ const Contact = () => {
                       type="email"
                       id="formEmail"
                       className="form-control border-white border"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
                     <label
                       className="form-label text-white"
@@ -71,12 +130,15 @@ const Contact = () => {
               </div>
               <div className="form-outline mb-4">
                 <input
-                  type="text"
-                  id="formSubject"
+                  type="tel"
+                  id="formPhone"
                   className="form-control border-white border"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
                 />
-                <label className="form-label text-white" htmlFor="formSubject">
-                  Subject
+                <label className="form-label text-white" htmlFor="formPhone">
+                  Phone
                 </label>
               </div>
               <div className="form-outline mb-4">
@@ -84,13 +146,16 @@ const Contact = () => {
                   id="formMessage"
                   className="form-control border-white border"
                   rows="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
                 ></textarea>
                 <label className="form-label text-white" htmlFor="formMessage">
                   Message
                 </label>
               </div>
-              <button type="submit" className="  btn btn-primary mb-4 ">
-                Send
+              <button type="submit" className="btn btn-primary mb-4">
+                {submitting ? "Sending..." : "Send"}
               </button>
               <div className="row text-left">
                 <div className="col-md-4 mb-3">
@@ -120,8 +185,29 @@ const Contact = () => {
         </div>
         {/* end */}
       </div>
+      {/* Success Modal */}
+      <Modal open={showSuccessModal} onClose={handleCloseModal} center>
+        <h2>Message Sent</h2>
+        <p>Your message has been sent successfully.</p>
+        <Button
+          style={styles.button}
+          variant="success"
+          onClick={handleCloseModal}
+        >
+          Close
+        </Button>
+      </Modal>
     </section>
   );
+};
+
+const styles = {
+  button: {
+    backgroundColor: "#ED1C24",
+    borderColor: "#ED1C24",
+    color: "#ffffff",
+    transition: "background-color 0.3s",
+  },
 };
 
 export default Contact;
