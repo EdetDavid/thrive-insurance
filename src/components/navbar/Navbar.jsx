@@ -121,6 +121,7 @@ const Navbar = () => {
               [
                 { to: "/board-of-directors", label: "Board of Directors" },
                 { to: "/management-team", label: "Management Team" },
+                { to: "/other-team-members", label: "Other Team Members" },
               ],
               "team"
             )}

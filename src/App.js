@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/about/About";
 import Whatwedo from "./pages/Whatwedo";
 import Team from "./pages/team/Team";
+import OtherTeamMembers from "./pages/team/otherTeam";
 import Products from "./pages/products/Products";
 import Claim from "./pages/claim/Claim";
 import Reportclaim from "./pages/claim/Reportclaim";
@@ -16,6 +17,7 @@ import Career from "./pages/career/Career";
 import BoardOfDirectors from "./pages/team/BoardofDirectors";
 import BackgroundMusic from "./components/music/BackgroundMusic";
 import musicFile from "./assets/music/wonderful-world.mp3";
+import NotFound from "./pages/notfound/NotFound";
 
 import {
   Engineering,
@@ -27,13 +29,6 @@ import {
   Travel,
   SpecialtyLines,
 } from "./pages/product/index";
-
-// import {
-//   FIREBASE_APP,
-//   FIREBASE_AUTH,
-//   FIREBASE_DB,
-//   FIREBASE_ANALYTICS,
-// } from "./firebaseConfig";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -75,6 +70,11 @@ const App = () => {
                 element={<BoardOfDirectors />}
               />
               <Route exact path="/management-team" element={<Team />} />
+              <Route
+                exact
+                path="/other-team-members"
+                element={<OtherTeamMembers />}
+              />
               <Route exact path="/claim" element={<Claim />} />
               <Route exact path="/report-a-claim" element={<Reportclaim />} />
               <Route exact path="/career" element={<Career />} />
@@ -123,6 +123,8 @@ const App = () => {
                 path="/products/specialty-lines"
                 element={<SpecialtyLines />}
               />
+              <Route path="*" element={<NotFound />} />
+              {/* Catch-all route for 404 */}
             </Routes>
           </div>
           <Footer />
