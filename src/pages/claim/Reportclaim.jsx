@@ -13,7 +13,9 @@ const Reportclaim = () => {
   const [phone, setPhone] = useState("");
   const [file, setFile] = useState(null);
   const [submitting, setSubmitting] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [modalVariant, setModalVariant] = useState("success");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,20 +46,24 @@ const Reportclaim = () => {
         setEmail("");
         setPhone("");
         setFile(null);
-        setShowSuccessModal(true);
+        setModalMessage("Your claim has been submitted successfully. You will receive a response from our team.");
+        setModalVariant("success");
       } else {
-        alert("Failed to submit form");
+        setModalMessage("Failed to submit the claim.");
+        setModalVariant("danger");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Failed to submit form");
+      setModalMessage("Failed to submit the claim.");
+      setModalVariant("danger");
     } finally {
       setSubmitting(false);
+      setShowModal(true);
     }
   };
 
   const handleCloseModal = () => {
-    setShowSuccessModal(false);
+    setShowModal(false);
   };
 
   return (
@@ -164,16 +170,13 @@ const Reportclaim = () => {
         </div>
       </div>
 
-      {/* Success Modal */}
-      <Modal open={showSuccessModal} onClose={handleCloseModal} center>
-        <h2>Claim Submitted</h2>
-        <p>
-          Your claim has been submitted successfully. You will receive a
-          response from our team.
-        </p>
+      {/* Success/Error Modal */}
+      <Modal open={showModal} onClose={handleCloseModal} center>
+        <h2>{modalVariant === "success" ? "Claim Submitted" : "Error"}</h2>
+        <p>{modalMessage}</p>
         <Button
-          style={styles.button}
-          variant="success"
+          style={modalVariant === "success" ? styles.successButton : styles.dangerButton}
+          variant={modalVariant}
           onClick={handleCloseModal}
         >
           Close
@@ -210,6 +213,18 @@ const styles = {
   button: {
     backgroundColor: "#ED1C24",
     borderColor: "#ED1C24",
+    color: "#ffffff",
+    transition: "background-color 0.3s",
+  },
+  successButton: {
+    backgroundColor: "#28a745",
+    borderColor: "#28a745",
+    color: "#ffffff",
+    transition: "background-color 0.3s",
+  },
+  dangerButton: {
+    backgroundColor: "#dc3545",
+    borderColor: "#dc3545",
     color: "#ffffff",
     transition: "background-color 0.3s",
   },
