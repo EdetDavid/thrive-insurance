@@ -13,3 +13,14 @@ img {
 .container {
   overflow-x: hidden !important;
 }
+
+@media (max-width: 768px) {
+  #box2 {
+    margin-top: 40px;
+  }
+
+  #service-img {
+    height: 240px !important;
+    width: 100% !important;
+  }
+}

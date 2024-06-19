@@ -13,14 +13,15 @@ const Services = () => {
           Services
         </h1>
         {/* row */}
-        <div className="row gap-5">
+        <div className="row gap-0">
           <div
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-easing="linear"
-            className="col-md "
+            className="col-md-7 "
           >
             <img
+            id="service-img"
               src={img}
               alt="services"
               className="img-fluid img-thumbnail shadow w-100 h-100"
@@ -33,7 +34,7 @@ const Services = () => {
               className="d-flex justify-content-end box mt-2 "
             ></div>
           </div>
-          <div className="col-md ">
+          <div id="box2" className="col-md-5 ">
             {/* color div */}
             <div
               data-aos="fade-left"
