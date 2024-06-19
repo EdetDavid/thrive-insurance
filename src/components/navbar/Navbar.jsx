@@ -126,13 +126,13 @@ const Navbar = () => {
               "team"
             )}
             <li className="nav-item">
-              <NavLink
+{/*               <NavLink
                 className="nav-link hide-nav"
                 to="/career"
                 onClick={handleLinkClick}
               >
                 Career
-              </NavLink>
+              </NavLink> */}
             </li>
 
             <li className="nav-item">
