@@ -125,7 +125,7 @@ const Navbar = () => {
               ],
               "team"
             )}
-{/*             <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 className="nav-link hide-nav"
                 to="/career"
@@ -133,8 +133,8 @@ const Navbar = () => {
               >
                 Career
               </NavLink>
-            </li>
- */}
+            </li> */}
+
             <li className="nav-item">
               <a
                 className="nav-link hide-nav"
