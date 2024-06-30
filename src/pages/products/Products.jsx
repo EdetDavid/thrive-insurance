@@ -18,7 +18,7 @@ const Products = () => {
       badge: "We are thrive",
       title: "Life and Personal Insurance",
       description:
-        "Property insurance is a crucial type of insurance policy designed to provide financial protection against risks to property, including damage or loss of buildings, personal property, and other assets. This insurance is essential for homeowners, renters, and businesses as it helps mitigate the financial impact of unforeseen events such as fire, theft, natural disasters, and other perils.",
+        "This is an insurance cover purchased by a company on the life of a key person within the organization to protect the company against loss of profit or cost of replacing the key person in the event  of demise. The aim is to compensate the busines for losses and facilitate business continuity.",
       link: "/products/life&personal-insurance",
     },
 
@@ -27,7 +27,7 @@ const Products = () => {
       badge: "We are thrive",
       title: "Pecuniary Insurance",
       description:
-        "This is an insurance cover purchased by a company on the life of a key person within the organization to protect the company against loss of profit or cost of replacing the key person in the event  of demise. The aim is to compensate the busines for losses and facilitate business continuity.",
+        "Pecuniaproductsy insurance, also known as financial loss insurance, is designed to cover businesses and individuals against losses that have a direct financial impact. This type of insurance focuses on compensating for monetary losses rather than physical damage or injury. Pecuniary insurance is crucial for mitigating financial risks and ensuring stability in the face of various financial contingencies.",
       link: "/products/pecuniary-insurance",
     },
     {
@@ -44,7 +44,7 @@ const Products = () => {
       badge: "We are thrive",
       title: "Liability Insurance",
       description:
-        "Pecuniaproductsy insurance, also known as financial loss insurance, is designed to cover businesses and individuals against losses that have a direct financial impact. This type of insurance focuses on compensating for monetary losses rather than physical damage or injury. Pecuniary insurance is crucial for mitigating financial risks and ensuring stability in the face of various financial contingencies.",
+        "This type of insurance covers any awards of damages given to a member of the public because of an injury or damage to their property caused by the insured.",
       link: "/products/liability-insurance",
     },
     {
@@ -52,7 +52,7 @@ const Products = () => {
       badge: "We are thrive",
       title: "Property Insurance",
       description:
-        "It provides cover on medical, financial and other losses incurred while traveling outside the country of residence. It covers all travellers for holiday and business purposes in the event of accidents, sickness or loss of property.",
+        "Property insurance is a crucial type of insurance policy designed to provide financial protection against risks to property, including damage or loss of buildings, personal property, and other assets. This insurance is essential for homeowners, renters, and businesses as it helps mitigate the financial impact of unforeseen events such as fire, theft, natural disasters, and other perils.",
       link: "/products/property-insurance",
     },
     {
@@ -60,7 +60,7 @@ const Products = () => {
       badge: "We are thrive",
       title: "Travel Insurance",
       description:
-        "This type of insurance covers any awards of damages given to a member of the public because of an injury or damage to their property caused by the insured.",
+        "It provides cover on medical, financial and other losses incurred while traveling outside the country of residence. It covers all travellers for holiday and business purposes in the event of accidents, sickness or loss of property.",
       link: "/products/travel-insurance",
     },
     {
