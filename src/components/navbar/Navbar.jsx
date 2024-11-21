@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import color from "../../config/colors";
 import logo from "../../assets/logos/logo.jpeg";
 import "./navbar.css";
@@ -31,9 +32,9 @@ const Navbar = () => {
 
   const renderDropdown = (title, items, id) => (
     <li className={`nav-item dropdown ${dropdownOpen === id ? "show" : ""}`}>
-      <a
+      <NavLink
         className="nav-link dropdown-toggle hide-nav"
-        href="#"
+        to="#"
         id={`navbarDropdown-${id}`}
         role="button"
         data-bs-toggle="dropdown"
@@ -41,20 +42,20 @@ const Navbar = () => {
         onClick={() => handleDropdownClick(id)}
       >
         {title}
-      </a>
+      </NavLink>
       <ul
         className={`dropdown-menu ${dropdownOpen === id ? "show" : ""}`}
         aria-labelledby={`navbarDropdown-${id}`}
       >
         {items.map(({ to, label }) => (
           <li key={to}>
-            <a
+            <NavLink
               className="dropdown-item hide-nav"
-              href={to}
+              to={to}
               onClick={handleLinkClick}
             >
               {label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -68,9 +69,13 @@ const Navbar = () => {
       }`}
     >
       <div className="container-fluid">
-        <a href="/" className="navbar-brand hide-nav" onClick={handleLinkClick}>
+        <NavLink
+          to="/"
+          className="navbar-brand hide-nav"
+          onClick={handleLinkClick}
+        >
           <img src={logo} alt="brand-logo" />
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -85,14 +90,14 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <a
+              <NavLink
                 className="nav-link hide-nav"
                 aria-current="page"
-                href="/"
+                to="/"
                 onClick={handleLinkClick}
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             {renderDropdown(
               "About Us",
@@ -103,13 +108,13 @@ const Navbar = () => {
               "about-us"
             )}
             <li className="nav-item">
-              <a
+              <NavLink
                 className="nav-link hide-nav"
-                href="/our-products"
+                to="/our-products"
                 onClick={handleLinkClick}
               >
                 Our Products
-              </a>
+              </NavLink>
             </li>
             {renderDropdown(
               "Team",
@@ -120,6 +125,7 @@ const Navbar = () => {
               ],
               "team"
             )}
+
             <li className="nav-item">
               <a
                 className="nav-link hide-nav"
@@ -131,14 +137,14 @@ const Navbar = () => {
             </li>
           </ul>
           <form className="d-flex">
-            <a
+            <NavLink
               style={styles.button}
               className="btn text-white hide-nav"
-              href="/report-a-claim"
+              to="/report-a-claim"
               onClick={handleLinkClick}
             >
               Report a Claim
-            </a>
+            </NavLink>
           </form>
         </div>
       </div>

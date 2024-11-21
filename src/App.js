@@ -13,7 +13,6 @@ import Reportclaim from "./pages/claim/Reportclaim";
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Career from "./pages/career/Career";
 import BoardOfDirectors from "./pages/team/BoardofDirectors";
 import BackgroundMusic from "./components/music/BackgroundMusic";
 import musicFile from "./assets/music/wonderful-world.mp3";
@@ -77,7 +76,7 @@ const App = () => {
               />
               <Route exact path="/claim" element={<Claim />} />
               <Route exact path="/report-a-claim" element={<Reportclaim />} />
-              <Route exact path="/career" element={<Career />} />
+
               <Route
                 exact
                 path="/products/life&personal-insurance"
