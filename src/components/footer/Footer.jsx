@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import "./Footer.css"; // Ensure this is imported
 
 const Footer = ({ className }) => {
@@ -27,23 +27,27 @@ const Footer = ({ className }) => {
             <h5>Follow Us</h5>
             <ul className="list-unstyled social-icons">
               <li>
-                <a className="nav-link" href="https://www.linkedin.com">
+                <a className="nav-link" href="https://ng.linkedin.com/company/combined-all-risks-insurance-brokers-carib-nigeria-limited">
                   <FaLinkedin /> <span className="icon-text">Linkedin</span>
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="https://www.instagram.com">
+                <a className="nav-link" href="https://www.instagram.com/thriveinsurancebrokers/">
                   <FaInstagram /> <span className="icon-text">Instagram</span>
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="https://www.facebook.com">
+                <a className="nav-link" href="https://www.facebook.com/thriveinsurancebrokers/">
                   <FaFacebook /> <span className="icon-text">Facebook</span>
                 </a>
               </li>
               <li>
                 <a className="nav-link" href="https://www.twitter.com">
                   <FaTwitter /> <span className="icon-text">Twitter</span>
+                </a>
+              </li><li>
+                <a className="nav-link" href="https://www.tiktok.com/@thriveinsurancebrokers/video/7283816632215014661">
+                  <FaTiktok /> <span className="icon-text">Tiktok</span>
                 </a>
               </li>
             </ul>
