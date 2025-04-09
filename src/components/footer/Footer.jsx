@@ -42,7 +42,7 @@ const Footer = ({ className }) => {
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="https://www.twitter.com">
+                <a className="nav-link" href="https://twitter.com/thrivebrokers">
                   <FaTwitter /> <span className="icon-text">Twitter</span>
                 </a>
               </li><li>
