@@ -63,92 +63,148 @@ const Navbar = () => {
   );
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg navbar-light bg-white black-shadow px-4 ${
-        isFixed ? "fixed-top" : ""
-      }`}
-    >
-      <div className="container-fluid">
-        <NavLink
-          to="/"
-          className="navbar-brand hide-nav"
-          onClick={handleLinkClick}
-        >
-          <img src={logo} alt="brand-logo" />
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i className="fas fa-bars fs-4"></i>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <NavLink
-                className="nav-link hide-nav"
-                aria-current="page"
-                to="/"
-                onClick={handleLinkClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            {renderDropdown(
-              "About Us",
-              [
-                { to: "/who-we-are", label: "Who we are" },
-                { to: "/what-we-do", label: "What we do" },
-              ],
-              "about-us"
-            )}
-            <li className="nav-item">
-              <NavLink
-                className="nav-link hide-nav"
-                to="/our-products"
-                onClick={handleLinkClick}
-              >
-                Our Products
-              </NavLink>
-            </li>
-            {renderDropdown(
-              "Team",
-              [
-                { to: "/board-of-directors", label: "Board of Directors" },
-                { to: "/management-team", label: "Management Team" },
-                { to: "/other-team-members", label: "Other Team Members" },
-              ],
-              "team"
-            )}
+    <>
+      <nav
+        className={`navbar navbar-expand-lg navbar-light bg-white black-shadow px-4 ${
+          isFixed ? "fixed-top" : ""
+        }`}
+      >
+        <div className="container-fluid">
+          <NavLink
+            to="/"
+            className="navbar-brand hide-nav"
+            onClick={handleLinkClick}
+          >
+            <img src={logo} alt="brand-logo" />
+          </NavLink>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i className="fas fa-bars fs-4"></i>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link hide-nav"
+                  aria-current="page"
+                  to="/"
+                  onClick={handleLinkClick}
+                >
+                  Home
+                </NavLink>
+              </li>
+              {renderDropdown(
+                "About Us",
+                [
+                  { to: "/who-we-are", label: "Who we are" },
+                  { to: "/what-we-do", label: "What we do" },
+                ],
+                "about-us"
+              )}
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link hide-nav"
+                  to="/our-products"
+                  onClick={handleLinkClick}
+                >
+                  Our Products
+                </NavLink>
+              </li>
+              {renderDropdown(
+                "Team",
+                [
+                  { to: "/board-of-directors", label: "Board of Directors" },
+                  { to: "/management-team", label: "Management Team" },
+                  { to: "/other-team-members", label: "Other Team Members" },
+                ],
+                "team"
+              )}
 
-            <li className="nav-item">
-              <a
-                className="nav-link hide-nav"
-                href="/#contact"
+              <li className="nav-item">
+                <a
+                  className="nav-link hide-nav"
+                  href="/#contact"
+                  onClick={handleLinkClick}
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+            <form className="d-flex">
+              <NavLink
+                style={styles.button}
+                className="btn text-white hide-nav"
+                to="/report-a-claim"
                 onClick={handleLinkClick}
               >
-                Contact Us
-              </a>
-            </li>
-          </ul>
-          <form className="d-flex">
-            <NavLink
-              style={styles.button}
-              className="btn text-white hide-nav"
-              to="/report-a-claim"
-              onClick={handleLinkClick}
-            >
-              Report a Claim
-            </NavLink>
-          </form>
+                Report a Claim
+              </NavLink>
+            </form>
+          </div>
         </div>
+      </nav>
+      {/* Desk lines section under navbar */}
+      <div
+        className="desk-lines-bar d-flex flex-wrap justify-content-center align-items-center w-100"
+        style={{
+          background: "linear-gradient(90deg, #181344 0%, #3a3a60 100%)",
+          color: "#fff",
+          fontWeight: 500,
+          fontSize: "1rem",
+          letterSpacing: "0.5px",
+          boxShadow: "0 2px 8px rgba(24,19,68,0.07)",
+          padding: "0.6rem 0",
+          borderBottom: "1px solid #e5e5e5",
+          zIndex: 1000,
+        }}
+      >
+        <span className="me-4 d-flex align-items-center">
+          <i
+            className="fas fa-phone-alt me-2"
+            style={{ color: "#25d366", fontSize: "1.1em" }}
+          ></i>
+          <span>
+            Desk 1:{" "}
+            <a
+              href="tel:+2348180996418"
+              style={{
+                color: "#fff",
+                textDecoration: "underline dotted",
+                fontWeight: 600,
+              }}
+            >
+              +234 818 099 6418
+            </a>
+          </span>
+        </span>
+        <span className="me-4 d-flex align-items-center">
+          <i
+            className="fas fa-phone-alt me-2"
+            style={{ color: "#25d366", fontSize: "1.1em" }}
+          ></i>
+          <span>
+            Desk 2:{" "}
+            <a
+              href="tel:+2347087942708"
+              style={{
+                color: "#fff",
+                textDecoration: "underline dotted",
+                fontWeight: 600,
+              }}
+            >
+              +234 708 794 2708
+            </a>
+          </span>
+        </span>
       </div>
-    </nav>
+    </>
   );
 };
 
