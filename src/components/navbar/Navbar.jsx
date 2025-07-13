@@ -151,27 +151,14 @@ const Navbar = () => {
         </div>
       </nav>
       {/* Desk lines section under navbar */}
-      <div
-        className="desk-lines-bar d-flex flex-wrap justify-content-center align-items-center w-100"
-        style={{
-          background: "linear-gradient(90deg, #181344 0%, #3a3a60 100%)",
-          color: "#fff",
-          fontWeight: 500,
-          fontSize: "1rem",
-          letterSpacing: "0.5px",
-          boxShadow: "0 2px 8px rgba(24,19,68,0.07)",
-          padding: "0.6rem 0",
-          borderBottom: "1px solid #e5e5e5",
-          zIndex: 1000,
-        }}
-      >
-        <span className="me-4 d-flex align-items-center">
+      <div className="desk-lines-bar">
+        <span>
           <i
             className="fas fa-phone-alt me-2"
             style={{ color: "#25d366", fontSize: "1.1em" }}
           ></i>
           <span>
-            Desk 1:{" "}
+            Desk 1: {" "}
             <a
               href="tel:+2348180996418"
               style={{
@@ -184,13 +171,13 @@ const Navbar = () => {
             </a>
           </span>
         </span>
-        <span className="me-4 d-flex align-items-center">
+        <span>
           <i
             className="fas fa-phone-alt me-2"
             style={{ color: "#25d366", fontSize: "1.1em" }}
           ></i>
           <span>
-            Desk 2:{" "}
+            Desk 2: {" "}
             <a
               href="tel:+2347087942708"
               style={{
