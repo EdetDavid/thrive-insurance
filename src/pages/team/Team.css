@@ -749,11 +749,25 @@
 .management-team-section {
   padding: 3.5rem 1rem;
   background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.management-team-section .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .management-header {
   text-align: center;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .management-title {
@@ -774,6 +788,9 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .management-card {
