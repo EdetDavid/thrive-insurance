@@ -5,9 +5,9 @@ import "./Team.css";
 
 const managementMembers = [
   { imgSrc: img4, name: "Alice Johnson", role: "CEO", bio: "Leads the company with a focus on innovation and long-term strategy." },
-  { imgSrc: img5, name: "Bob Brown", role: "CTO", bio: "Leads product engineering and technology strategy." },
-  { imgSrc: img4, name: "Carol White", role: "CFO", bio: "Oversees financial planning and investor relations." },
-  { imgSrc: img5, name: "David Green", role: "COO", bio: "Runs operations and ensures delivery excellence." },
+  { imgSrc: img5, name: "Obinna Okoro", role: "CTO", bio: "Leads product engineering and technology strategy." },
+  { imgSrc: img4, name: "Karaki Deborah", role: "CFO", bio: "Oversees financial planning and investor relations." },
+  // { imgSrc: img5, name: "David Green", role: "COO", bio: "Runs operations and ensures delivery excellence." },
 ];
 
 const OtherTeamMembers = () => {

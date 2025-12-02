@@ -4,10 +4,10 @@ import img5 from "../../assets/images/team2.png";
 import "./Team.css";
 
 const managementTeam = [
-  { imgSrc: img4, name: "Alice Johnson", role: "CEO", bio: "Leads the company with a focus on innovation and long-term strategy." },
-  { imgSrc: img5, name: "Bob Brown", role: "CTO", bio: "Leads product engineering and technology strategy." },
-  { imgSrc: img4, name: "Carol White", role: "CFO", bio: "Oversees financial planning and investor relations." },
-  { imgSrc: img5, name: "David Green", role: "COO", bio: "Runs operations and ensures delivery excellence." },
+  { imgSrc: img4, name: "Anifat Dare", role: "CEO", bio: "Leads the company with a focus on innovation and long-term strategy." },
+  { imgSrc: img5, name: "Adeola Ashimolowo", role: "CTO", bio: "Leads product engineering and technology strategy." },
+  { imgSrc: img4, name: "Kikelomo Ashogbon", role: "CFO", bio: "Oversees financial planning and investor relations." },
+  // { imgSrc: img5, name: " Green", role: "COO", bio: "Runs operations and ensures delivery excellence." },
 ];
 
 const ManagementTeam = () => {
