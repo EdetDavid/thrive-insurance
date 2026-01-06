@@ -4,6 +4,12 @@ import female from "../../assets/images/female-avatar.jpg";
 import "./Team.css";
 
 const managementMembers = [
+   {
+    imgSrc: female,
+    name: "Kikelomo Ashogbon",
+    role: "Technical Officer",
+    bio: " Drives business growth and strategic partnerships.",
+  },
   {
     imgSrc: male,
     name: "Obinna Okoro",
