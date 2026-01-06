@@ -1,13 +1,33 @@
 import React from "react";
-import img4 from "../../assets/images/team1.png";
-import img5 from "../../assets/images/team2.png";
+import male from "../../assets/images/male-avatar.jpg";
+import female from "../../assets/images/female-avatar.jpg";
 import "./Team.css";
 
 const managementMembers = [
-  { imgSrc: img4, name: "Alice Johnson", role: "CEO", bio: "Leads the company with a focus on innovation and long-term strategy." },
-  { imgSrc: img5, name: "Obinna Okoro", role: "CTO", bio: "Leads product engineering and technology strategy." },
-  { imgSrc: img4, name: "Karaki Deborah", role: "CFO", bio: "Oversees financial planning and investor relations." },
-  // { imgSrc: img5, name: "David Green", role: "COO", bio: "Runs operations and ensures delivery excellence." },
+  {
+    imgSrc: male,
+    name: "Obinna Okoro",
+    role: "Business Development",
+    bio: " Drives business growth and strategic partnerships.",
+  },
+  {
+    imgSrc: female,
+    name: "Karaki Deborah",
+    role: "Business Development",
+    bio: " Drives business growth and strategic partnerships.",
+  },
+  {
+    imgSrc: male,
+    name: "Enirere Adesokan",
+    role: "Technical Officer",
+    bio: "Runs operations and ensures delivery excellence.",
+  },
+  {
+    imgSrc: female,
+    name: "Tofunmi Sulaimon",
+    role: "Graduate Trainee",
+    bio: "Runs operations and ensures delivery excellence.",
+  },
 ];
 
 const OtherTeamMembers = () => {
@@ -16,7 +36,9 @@ const OtherTeamMembers = () => {
       <div className="container">
         <header className="management-header">
           <h2 className="management-title">Other Team Members</h2>
-          <p className="management-subtitle">Experienced leadership driving business performance.</p>
+          <p className="management-subtitle">
+            Experienced leadership driving business performance.
+          </p>
         </header>
 
         <div className="management-grid">
