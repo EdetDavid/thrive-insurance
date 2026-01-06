@@ -1,6 +1,6 @@
 import React from "react";
-import male from "../../assets/images/male-avatar.jpg";
-import female from "../../assets/images/female-avatar.jpg";
+import male from "../../assets/images/male-avatar.png";
+import female from "../../assets/images/female-avatar.png";
 import "./Team.css";
 
 const managementTeam = [
