@@ -21,8 +21,8 @@ const managementTeam = [
   {
     imgSrc: male,
     name: " Richard Katchy",
-    role: "Head, Inter Financial Officer",
-    bio: "Chief Financial Officer",
+    role: "Head, Internal Audit",
+    bio: "Oversees financial planning and investor relations.",
   },
 
   {
@@ -59,7 +59,7 @@ const ManagementTeam = () => {
               <div className="card-body">
                 <h3 className="card-name">{m.name}</h3>
                 <p className="card-role">{m.role}</p>
-                <p className="card-bio">{m.bio}</p>
+                {/* <p className="card-bio">{m.bio}</p> */}
               </div>
             </article>
           ))}
