@@ -4,11 +4,26 @@ import female from "../../assets/images/female-avatar.png";
 import "./Team.css";
 
 const managementTeam = [
+
+    {
+    imgSrc: female,
+    name: "Tokunbo Adeleke",
+    role: "Executive Director",
+    bio: "Leads the company with a focus on innovation and long-term strategy.",
+  },
+
   {
     imgSrc: female,
     name: "Anifat Dare",
     role: "Head,Technical Business Services",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
+  },
+
+   {
+    imgSrc: female,
+    name: "Adeola Ashimolowo",
+    role: "R.M Corporates & FIs",
+    bio: "Leads product engineering and technology strategy.",
   },
 
   {
@@ -25,15 +40,16 @@ const managementTeam = [
     bio: "Oversees financial planning and investor relations.",
   },
 
-  {
+    {
     imgSrc: female,
-    name: "Adeola Ashimolowo",
-    role: "R.M Corporates & FIs",
-    bio: "Leads product engineering and technology strategy.",
+    name: "Beatrice Diyan",
+    role: "Head, H.R & Admin",
+    bio: "Runs operations and ensures delivery excellence.",
   },
+
   {
     imgSrc: female,
-    name: "Kikelomo Ashogbon",
+    name: "Oluwaremilekun Adebowale",
     role: "Technical Officer",
     bio: "Runs operations and ensures delivery excellence.",
   },
