@@ -6,7 +6,7 @@ import "./Team.css";
 const managementTeam = [
   {
     imgSrc: male,
-    name: "Akinwake Adedoyin",
+    name: "Akinwale Adedoyin",
     role: "Managing Director",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
   },
