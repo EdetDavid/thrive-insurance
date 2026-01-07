@@ -24,7 +24,7 @@ const managementTeam = [
     bio: "Chief Financial Officer",
   },
 
-   {
+  {
     imgSrc: female,
     name: "Anifat Dare",
     role: "Head,Technical Business Services",
