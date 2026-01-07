@@ -55,7 +55,7 @@ const managementTeam = [
   {
     imgSrc: female,
     name: "Oluwaremilekun Adebowale",
-    role: "Technical Officer",
+    role: "Head, Branding & Corporate Communications",
     bio: "Runs operations and ensures delivery excellence.",
   },
 ];
