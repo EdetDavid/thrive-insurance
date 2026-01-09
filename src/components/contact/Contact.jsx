@@ -30,8 +30,8 @@ const Contact = () => {
       setSubmitting(true);
 
       const response = await fetch(
-        // "https://thrivenig-backend.onrender.com/api/contact/",
-        "http://localhost:8000/api/contact/",
+        "https://thrivenig-backend.onrender.com/api/contact/",
+        // "http://localhost:8000/api/contact/",
         {
           method: "POST",
           body: formData,
