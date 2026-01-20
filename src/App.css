@@ -11,10 +11,9 @@ body {
   font-family: "Caviar Dreams", sans-serif !important;
   margin: 0;
   padding: 0;
-  --webkit-user-select: none;
+  -webkit-user-select: none;
   scroll-behavior: smooth;
-  --moz-user-select: none !important;
-  user-select: none !important;
+  user-select: none ;
 }
 .blue-text {
   color: #181344 !important;
