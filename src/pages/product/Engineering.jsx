@@ -1,5 +1,4 @@
 import React from "react";
-import eng1 from "./img/eng1.jpg";
 import eng2 from "./img/eng2.jpg";
 import "./Engineering.css";
 
