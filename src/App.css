@@ -13,7 +13,8 @@ body {
   padding: 0;
   --webkit-user-select: none;
   scroll-behavior: smooth;
-  user-select: none ;
+  --moz-user-select: none !important;
+  user-select: none !important;
 }
 .blue-text {
   color: #181344 !important;
