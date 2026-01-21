@@ -5,6 +5,14 @@
   background-repeat: no-repeat;
 }
 
+.team-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px 16px 0 0;
+}
+
 @media (max-width: 500px) {
 }
 #board {
@@ -199,13 +207,17 @@
 
 /* 3D Depth Layer - Background shadow */
 .director-profile-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(237, 28, 36, 0.05) 0%, rgba(24, 19, 68, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(237, 28, 36, 0.05) 0%,
+    rgba(24, 19, 68, 0.05) 100%
+  );
   border-radius: 16px;
   transform: translateZ(-10px);
   z-index: -1;
@@ -214,13 +226,17 @@
 
 /* 3D Bottom Shadow Layer */
 .director-profile-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 8px;
   right: -8px;
   bottom: -12px;
-  background: linear-gradient(135deg, rgba(237, 28, 36, 0.15) 0%, rgba(24, 19, 68, 0.2) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(237, 28, 36, 0.15) 0%,
+    rgba(24, 19, 68, 0.2) 100%
+  );
   border-radius: 16px;
   filter: blur(16px);
   transform: translateZ(-25px);
@@ -230,16 +246,8 @@
   pointer-events: none;
 }
 
-.director-profile-card:hover {
-  transform: translateY(-16px) rotateX(4deg) rotateY(-3deg) rotateZ(1deg) translateZ(25px);
-  box-shadow: 
-    0 30px 80px rgba(237, 28, 36, 0.2),
-    0 20px 50px rgba(237, 28, 36, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
 .director-profile-card:hover::after {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Hexagon Accent Background */
@@ -272,15 +280,11 @@
 .profile-image-container {
   position: relative;
   width: 100%;
-  padding-bottom: 125%;
+  padding-bottom: 110%;
   overflow: hidden;
   background: linear-gradient(135deg, #181344 0%, #ed1c24 100%);
   transform-style: preserve-3d;
   transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.director-profile-card:hover .profile-image-container {
-  transform: translateZ(15px);
 }
 
 .profile-image {
@@ -306,26 +310,6 @@
   );
 }
 
-/* Order Badge */
-.profile-order-badge {
-  position: absolute;
-  top: 12px;
-  display: none !important;
-  right: 12px;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #ed1c24 0%, #ff4444 100%);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 16px rgba(237, 28, 36, 0.3);
-  z-index: 10;
-}
-
 /* Profile Content */
 .profile-content {
   padding: 1.8rem;
@@ -336,10 +320,6 @@
   z-index: 2;
   transform-style: preserve-3d;
   transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.director-profile-card:hover .profile-content {
-  transform: translateZ(10px);
 }
 
 .profile-name {
@@ -373,10 +353,6 @@
   border-radius: 50%;
   pointer-events: none;
   transform-style: preserve-3d;
-}
-
-.director-profile-card:hover .accent-dot {
-  transform: translateZ(8px);
 }
 
 .accent-dot-1 {
@@ -495,7 +471,7 @@
   }
 
   .profile-image-container {
-    padding-bottom: 140%;
+    padding-bottom: 120%;
   }
 
   .profile-content {
@@ -531,11 +507,11 @@
 
 .director-modal-overlay {
   position: fixed;
-  top: 0;
+  top: 5%;
+  margin: 40px 0 0 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  margin: 0;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
   display: flex;
@@ -599,24 +575,6 @@
   border-radius: 16px;
   object-fit: cover;
   box-shadow: 0 12px 40px rgba(24, 19, 68, 0.15);
-}
-
-.modal-badge {
-  position: absolute;
-  top: 16px;
-  display: none !important;
-  right: 16px;
-  width: 52px;
-  height: 52px;
-  background: linear-gradient(135deg, #ed1c24 0%, #ff4444 100%);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.4rem;
-  box-shadow: 0 6px 20px rgba(237, 28, 36, 0.3);
 }
 
 .modal-content-section {
@@ -743,130 +701,6 @@
 
 .director-profile-card {
   cursor: pointer;
-}
-
-/* ========== MANAGEMENT TEAM (Redesigned) ========== */
-.management-team-section {
-  padding: 3.5rem 1rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.management-team-section .container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.management-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  width: 100%;
-}
-
-.management-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #181344;
-  margin: 0 0 0.4rem 0;
-}
-
-.management-subtitle {
-  color: #606060;
-  margin: 0;
-  font-size: 1rem;
-}
-
-.management-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.management-card {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(24, 19, 68, 0.06);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 240ms ease, box-shadow 240ms ease;
-}
-
-.management-card:focus,
-.management-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 60px rgba(24, 19, 68, 0.12);
-  outline: none;
-}
-
-.card-media {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: linear-gradient(135deg, #181344 0%, #ed1c24 100%);
-}
-
-.card-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.card-body {
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.card-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #181344;
-  margin: 0;
-}
-
-.card-role {
-  font-size: 0.85rem;
-  color: #ed1c24;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  margin: 0;
-}
-
-.card-bio {
-  color: #606060;
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  flex-grow: 1;
-}
-
-@media (max-width: 992px) {
-  .management-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .management-grid {
-    grid-template-columns: 1fr;
-  }
-  .management-team-section {
-    padding: 2rem 0.75rem;
-  }
 }
 
 /* Modal Responsive Design */
@@ -1031,7 +865,7 @@
 
   .modal-badge {
     width: 44px;
-    
+
     height: 44px;
     font-size: 1.2rem;
   }
@@ -1112,13 +946,12 @@
     max-height: 380px;
     height: 100%;
     border-radius: 10px;
-    
   }
 
   .modal-badge {
     width: 40px;
     height: 40px;
-    
+
     font-size: 1rem;
     top: 12px;
     right: 12px;
@@ -1147,17 +980,7 @@
 
 /* ========== 3D RESPONSIVE ADJUSTMENTS ========== */
 
-@media (max-width: 1024px) {
-  .director-profile-card:hover {
-    transform: translateY(-12px) rotateX(3deg) rotateY(-2deg) translateZ(20px) !important;
-  }
-}
-
 @media (max-width: 768px) {
-  .director-profile-card:hover {
-    transform: translateY(-10px) rotateX(2deg) rotateY(-1deg) translateZ(15px) !important;
-  }
-
   .director-profile-card::after {
     top: 10px;
     left: 6px;
@@ -1168,10 +991,6 @@
 }
 
 @media (max-width: 600px) {
-  .director-profile-card:hover {
-    transform: translateY(-8px) rotateX(1deg) translateZ(10px) !important;
-  }
-
   .director-profile-card::after {
     top: 8px;
     left: 4px;
@@ -1202,13 +1021,17 @@
 
 /* 3D Depth Layer - Card background shadow */
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(237, 28, 36, 0.05) 0%, rgba(24, 19, 68, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(237, 28, 36, 0.05) 0%,
+    rgba(24, 19, 68, 0.05) 100%
+  );
   border-radius: 16px;
   transform: translateZ(-10px);
   z-index: -1;
@@ -1217,13 +1040,17 @@
 
 /* 3D Bottom Shadow Layer */
 .card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 8px;
   right: -8px;
   bottom: -12px;
-  background: linear-gradient(135deg, rgba(237, 28, 36, 0.15) 0%, rgba(24, 19, 68, 0.2) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(237, 28, 36, 0.15) 0%,
+    rgba(24, 19, 68, 0.2) 100%
+  );
   border-radius: 16px;
   filter: blur(16px);
   transform: translateZ(-25px);
@@ -1233,38 +1060,18 @@
   pointer-events: none;
 }
 
-/* Card Hover 3D Effect */
-.card:hover {
-  transform: translateY(-16px) rotateX(4deg) rotateY(-3deg) rotateZ(1deg) translateZ(25px);
-  box-shadow: 
-    0 30px 80px rgba(237, 28, 36, 0.2),
-    0 20px 50px rgba(237, 28, 36, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.card:hover::after {
-  opacity: 1;
-}
-
 /* Card Image 3D Effects */
 .card-img-top {
+  margin-top: auto;
   transform-style: preserve-3d;
   transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
   border-radius: 16px 16px 0 0;
-}
-
-.card:hover .card-img-top {
-  transform: translateZ(15px);
 }
 
 /* Card Body 3D Effects */
 .card-body {
   transform-style: preserve-3d;
   transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.card:hover .card-body {
-  transform: translateZ(10px);
 }
 
 /* Card Title and Subtitle Styling */
@@ -1285,25 +1092,9 @@
   transform-style: preserve-3d;
 }
 
-.card-text {
-  font-size: 0.9rem;
-  color: #606060;
-  line-height: 1.5;
-  transform-style: preserve-3d;
-}
-
 /* ========== TEAM CARDS RESPONSIVE 3D ========== */
 
-@media (max-width: 1024px) {
-  .card:hover {
-    transform: translateY(-12px) rotateX(3deg) rotateY(-2deg) translateZ(20px) !important;
-  }
-}
-
 @media (max-width: 768px) {
-  .card:hover {
-    transform: translateY(-10px) rotateX(2deg) rotateY(-1deg) translateZ(15px) !important;
-  }
 
   .card::after {
     top: 10px;
@@ -1320,16 +1111,9 @@
   .card-subtitle {
     font-size: 0.85rem;
   }
-
-  .card-text {
-    font-size: 0.85rem;
-  }
 }
 
 @media (max-width: 600px) {
-  .card:hover {
-    transform: translateY(-8px) rotateX(1deg) translateZ(10px) !important;
-  }
 
   .card::after {
     top: 8px;
@@ -1344,10 +1128,6 @@
   }
 
   .card-subtitle {
-    font-size: 0.8rem;
-  }
-
-  .card-text {
     font-size: 0.8rem;
   }
 }

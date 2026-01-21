@@ -1,91 +1,87 @@
 import React from "react";
 import male from "../../assets/images/male-avatar.png";
 import female from "../../assets/images/female-avatar.png";
-import remi from "../../assets/images/team/remi.jpg";
-import richard from "../../assets/images/team/Richard.jpg";
+import remi from "../../assets/images/team/Remi.jpg";
+import richard from "../../assets/images/team/Richard.jpeg";
 import "./Team.css";
-
 
 const managementTeam = [
   {
+    id: "akinwale-adedoyin",
     imgSrc: male,
     name: "Akinwale Adedoyin",
     role: "Managing Director",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
   },
   {
-    imgSrc: female,
-    name: "Tokunbo Adeleke",
-    role: "Executive Director",
-    bio: "Leads the company with a focus on innovation and long-term strategy.",
-  },
-
-  {
+    id: "opeyemi-okemakinde",
     imgSrc: male,
-    name: " Opeyemi Okemakinde",
+    name: "Opeyemi Okemakinde",
     role: "Chief Financial Officer",
-    bio: "Chief Financial Officer",
-  },
-
-  {
-    imgSrc: female,
-    name: "Anifat Dare",
-    role: "Head,Technical Business Services",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
   },
-
   {
+    id: "richard-katchy",
     imgSrc: richard,
-    name: " Richard Katchy",
+    name: "Richard Katchy",
     role: "Head, Internal Audit",
     bio: "Oversees financial planning and investor relations.",
   },
-
   {
+    id: "beatrice-diyan",
     imgSrc: female,
     name: "Beatrice Diyan",
     role: "Head, H.R & Admin",
-    bio: "Runs operations and ensures delivery excellence.",
-  },
-
-  {
-    imgSrc: female,
-    name: "Adeola Ashimolowo",
-    role: "R.M Corporates & FIs",
     bio: "Leads product engineering and technology strategy.",
   },
-
   {
+    id: "oluwaremilekun-adebowale",
     imgSrc: remi,
     name: "Oluwaremilekun Adebowale",
-    role: "Head, Branding & Corporate Communications",
+    role: "Head, Branding and Corporate Communications",
     bio: "Runs operations and ensures delivery excellence.",
   },
 ];
 
+const TeamMemberCard = ({ member }) => (
+  <div className="col">
+    <div className="card h-100 d-flex flex-column">
+      <img
+        src={member.imgSrc}
+        className="card-img-top team-img"
+        alt={member.name}
+        loading="lazy"
+      />
+      <div className="card-body d-flex flex-column">
+        <h5 className="card-title mb-2">{member.name}</h5>
+        <h6 className="card-subtitle text-muted">{member.role}</h6>
+      </div>
+    </div>
+  </div>
+);
+
 const ManagementTeam = () => {
   return (
-    <section className="management-team-section">
+    <section className="py-5" style={{ overflow: "hidden" }}>
       <div className="container">
-        <header className="management-header">
-          <h2 className="management-title">Management Team</h2>
-          <p className="management-subtitle">
-            Experienced leadership driving business performance.
-          </p>
-        </header>
+        {/* Section Header */}
+        <div data-aos="fade-up" className="row mb-5">
+          <div className="col text-center">
+            <h2 className="fw-bold text-dark display-5">Management Team</h2>
+            <p className="text-muted mt-3">
+              Meet our leadership team driving innovation and excellence
+            </p>
+          </div>
+        </div>
 
-        <div className="management-grid">
-          {managementTeam.map((m, i) => (
-            <article className="management-card" key={i} tabIndex={0}>
-              <div className="card-media">
-                <img src={m.imgSrc} alt={m.name} className="card-photo" />
-              </div>
-              <div className="card-body">
-                <h3 className="card-name">{m.name}</h3>
-                <p className="card-role">{m.role}</p>
-                {/* <p className="card-bio">{m.bio}</p> */}
-              </div>
-            </article>
+        {/* Team Grid */}
+        <div
+          data-aos="zoom-in"
+          className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4"
+          style={{ overflow: "hidden" }}
+        >
+          {managementTeam.map((member) => (
+            <TeamMemberCard key={member.id} member={member} />
           ))}
         </div>
       </div>
