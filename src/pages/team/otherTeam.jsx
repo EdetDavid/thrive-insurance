@@ -1,6 +1,7 @@
 import React from "react";
 import male from "../../assets/images/male-avatar.jpg";
 import female from "../../assets/images/female-avatar.jpg";
+import david from "../../assets/images/team/David.png"
 import "./Team.css";
 
 const managementTeam = [
@@ -44,6 +45,13 @@ const managementTeam = [
     imgSrc: female,
     name: "Abibat Adeleke",
     role: "Accounting Officer",
+    bio: "Runs operations and ensures delivery excellence.",
+  },
+  {
+    id: "david-edet",
+    imgSrc: david,
+    name: "David Edet",
+    role: "IT Support Officer",
     bio: "Runs operations and ensures delivery excellence.",
   },
 ];
