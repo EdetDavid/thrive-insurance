@@ -4,7 +4,7 @@ import female from "../../assets/images/female-avatar.png";
 import remi from "../../assets/images/team/Remi.jpg";
 import richard from "../../assets/images/team/Richard.jpeg";
 import tokunbo from "../../assets/images/directors/Tokunbo.png";
-import akinwale from "../../assets/images/directors/Akinwale.png";
+import akinwale from "../../assets/images/directors/AKINWALE.png";
 import "./Team.css";
 
 const managementTeam = [
