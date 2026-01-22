@@ -3,14 +3,38 @@ import male from "../../assets/images/male-avatar.png";
 import female from "../../assets/images/female-avatar.png";
 import remi from "../../assets/images/team/Remi.jpg";
 import richard from "../../assets/images/team/Richard.jpeg";
+import tokunbo from "../../assets/images/directors/Tokunbo.png";
+import akinwale from "../../assets/images/directors/Akinwale.png";
 import "./Team.css";
 
 const managementTeam = [
   {
     id: "akinwale-adedoyin",
-    imgSrc: male,
+    imgSrc: akinwale,
     name: "Akinwale Adedoyin",
     role: "Managing Director",
+    bio: "Leads the company with a focus on innovation and long-term strategy.",
+  },
+  {
+    id: "tokunbo-adeleke",
+    imgSrc: tokunbo,
+    name: "Tokunbo Adeleke",
+    role: "Executive Director",
+    bio: "Leads the company with a focus on innovation and long-term strategy.",
+  },
+  {
+    id: "anifat-dare",
+    imgSrc: female,
+    name: "Anifat Dare",
+    role: "Head, Technical Business Services",
+    bio: "Leads the company with a focus on innovation and long-term strategy.",
+  },
+
+  {
+    id: "adeola-ashimolowo",
+    imgSrc: female,
+    name: "Adeola Ashimolowo",
+    role: "R.M Corporates & FIs",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
   },
   {
@@ -20,6 +44,7 @@ const managementTeam = [
     role: "Chief Financial Officer",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
   },
+
   {
     id: "richard-katchy",
     imgSrc: richard,
