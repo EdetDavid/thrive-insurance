@@ -48,6 +48,14 @@ const managementTeam = [
     bio: "Runs operations and ensures delivery excellence.",
   },
   {
+    id: "susam-samson",
+    imgSrc: male,
+    name: "Susam Samson",
+    role: "Admin Officer",
+    bio: "Runs operations and ensures delivery excellence.",
+  },
+
+  {
     id: "david-edet",
     imgSrc: david,
     name: "David Edet",
