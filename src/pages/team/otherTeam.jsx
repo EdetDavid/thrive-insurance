@@ -1,9 +1,10 @@
 import React from "react";
 import male from "../../assets/images/male-avatar.jpg";
 import female from "../../assets/images/female-avatar.jpg";
-import david from "../../assets/images/team/David.png"
-import obinna from "../../assets/images/team/Obinna.png"
-import susam from "../../assets/images/team/susam.png"
+import david from "../../assets/images/team/David.png";
+import obinna from "../../assets/images/team/Obinna.png";
+import enirere from "../../assets/images/team/Enirere.png";
+import susam from "../../assets/images/team/susam.png";
 import "./Team.css";
 
 const managementTeam = [
@@ -30,7 +31,7 @@ const managementTeam = [
   },
   {
     id: "enirere-adesokan",
-    imgSrc: male,
+    imgSrc: enirere,
     name: "Enirere Adesokan",
     role: "Technical Officer",
     bio: "Runs operations and ensures delivery excellence.",
@@ -91,7 +92,6 @@ const OtherTeamMembers = () => {
         <div data-aos="fade-up" className="row mb-5">
           <div className="col text-center">
             <h2 className="fw-bold text-dark display-5">Other Team Members</h2>
-       
           </div>
         </div>
 
