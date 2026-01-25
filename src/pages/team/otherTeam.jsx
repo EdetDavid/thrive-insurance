@@ -2,6 +2,8 @@ import React from "react";
 import male from "../../assets/images/male-avatar.jpg";
 import female from "../../assets/images/female-avatar.jpg";
 import david from "../../assets/images/team/David.png"
+import obinna from "../../assets/images/team/Obinna.png"
+import susam from "../../assets/images/team/susam.png"
 import "./Team.css";
 
 const managementTeam = [
@@ -14,7 +16,7 @@ const managementTeam = [
   },
   {
     id: "obinna-okoro",
-    imgSrc: male,
+    imgSrc: obinna,
     name: "Obinna Okoro",
     role: "Business Development",
     bio: "Drives business growth and strategic partnerships.",
@@ -44,12 +46,12 @@ const managementTeam = [
     id: "abibat-adeleke",
     imgSrc: female,
     name: "Abibat Adeleke",
-    role: "Accounting Officer",
+    role: "Accounts Officer",
     bio: "Runs operations and ensures delivery excellence.",
   },
   {
     id: "susam-samson",
-    imgSrc: male,
+    imgSrc: susam,
     name: "Susam Samson",
     role: "Admin Officer",
     bio: "Runs operations and ensures delivery excellence.",

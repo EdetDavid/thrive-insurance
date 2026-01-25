@@ -5,6 +5,7 @@ import remi from "../../assets/images/team/Remi.jpg";
 import richard from "../../assets/images/team/Richard.jpeg";
 import tokunbo from "../../assets/images/directors/Tokunbo.png";
 import akinwale from "../../assets/images/directors/AKINWALE.png";
+import anifat from "../../assets/images/team/Anifat.jpeg";
 import "./Team.css";
 
 const managementTeam = [
@@ -24,7 +25,7 @@ const managementTeam = [
   },
   {
     id: "anifat-dare",
-    imgSrc: female,
+    imgSrc: anifat,
     name: "Anifat Dare",
     role: "Head, Technical Business Services",
     bio: "Leads the company with a focus on innovation and long-term strategy.",
