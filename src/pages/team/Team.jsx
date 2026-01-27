@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo } from "react";
 import male from "../../assets/images/male-avatar.png";
 import female from "../../assets/images/female-avatar.png";
 import remi from "../../assets/images/team/Remi.jpg";
@@ -10,62 +10,62 @@ import "./Team.css";
 
 // Team member data configuration
 const TEAM_MEMBERS = [
-    {
-      id: "akinwale-adedoyin",
-      imgSrc: akinwale,
-      name: "Akinwale Adedoyin",
-      role: "Managing Director",
-      department: "Executive",
-    },
-    {
-      id: "tokunbo-adeleke",
-      imgSrc: tokunbo,
-      name: "Tokunbo Adeleke",
-      role: "Executive Director",
-      department: "Executive",
-    },
-    {
-      id: "anifat-dare",
-      imgSrc: anifat,
-      name: "Anifat Dare",
-      role: "Head, Technical Business Services",
-      department: "Operations",
-    },
-    {
-      id: "adeola-ashimolowo",
-      imgSrc: female,
-      name: "Adeola Ashimolowo",
-      role: "R.M Corporates & FIs",
-      department: "Marketing & Sales",
-    },
-    {
-      id: "opeyemi-okemakinde",
-      imgSrc: male,
-      name: "Opeyemi Okemakinde",
-      role: "Chief Financial Officer",
-      department: "Finance",
-    },
-    {
-      id: "richard-katchy",
-      imgSrc: richard,
-      name: "Richard Katchy",
-      role: "Head, Internal Audit",
-      department: "Finance",
-    },
-    {
-      id: "beatrice-diyan",
-      imgSrc: female,
-      name: "Beatrice Diyan",
-      role: "Head, H.R & Admin",
-      department: "Human Resources",
-    },
-    {
-      id: "oluwaremilekun-adebowale",
-      imgSrc: remi,
-      name: "Oluwaremilekun Adebowale",
-      role: "Head, Branding and Corporate Communications",
-      department: "Branding & Communications",
-    },
+  {
+    id: "akinwale-adedoyin",
+    imgSrc: akinwale,
+    name: "Akinwale Adedoyin",
+    role: "Managing Director",
+    department: "Executive",
+  },
+  {
+    id: "tokunbo-adeleke",
+    imgSrc: tokunbo,
+    name: "Tokunbo Adeleke",
+    role: "Executive Director",
+    department: "Executive",
+  },
+  {
+    id: "anifat-dare",
+    imgSrc: anifat,
+    name: "Anifat Dare",
+    role: "Head, Technical Business Services",
+    department: "Operations",
+  },
+  {
+    id: "adeola-ashimolowo",
+    imgSrc: female,
+    name: "Adeola Ashimolowo",
+    role: "R.M Corporates & FIs",
+    department: "Marketing & Sales",
+  },
+  {
+    id: "opeyemi-okemakinde",
+    imgSrc: male,
+    name: "Opeyemi Okemakinde",
+    role: "Chief Financial Officer",
+    department: "Finance",
+  },
+  {
+    id: "richard-katchy",
+    imgSrc: richard,
+    name: "Richard Katchy",
+    role: "Head, Internal Audit",
+    department: "Finance",
+  },
+  {
+    id: "beatrice-diyan",
+    imgSrc: female,
+    name: "Beatrice Diyan",
+    role: "Head, H.R & Admin",
+    department: "Human Resources",
+  },
+  {
+    id: "oluwaremilekun-adebowale",
+    imgSrc: remi,
+    name: "Oluwaremilekun Adebowale",
+    role: "Head, Branding and Corporate Communications",
+    department: "Branding & Communications",
+  },
 ];
 
 /**
@@ -144,11 +144,7 @@ const ManagementTeam = () => {
   const teamMembers = useMemo(() => TEAM_MEMBERS, []);
 
   return (
-    <section
-      className="management-team-section"
-      role="region"
-      aria-label="Management Team"
-    >
+    <section className="management-team-section" aria-label="Management Team">
       <div className="team-container">
         <SectionHeader />
         <TeamGrid members={teamMembers} />
