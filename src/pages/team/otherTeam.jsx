@@ -1,5 +1,4 @@
-import React from "react";
-import male from "../../assets/images/male-avatar.jpg";
+import React, { useMemo } from "react";
 import female from "../../assets/images/female-avatar.jpg";
 import david from "../../assets/images/team/David.png";
 import obinna from "../../assets/images/team/Obinna.png";
@@ -7,104 +6,146 @@ import enirere from "../../assets/images/team/Enirere.png";
 import susam from "../../assets/images/team/susam.png";
 import "./Team.css";
 
-const managementTeam = [
+// Team members data configuration
+const TEAM_MEMBERS = [
   {
     id: "kiklomo-ashogbon",
     imgSrc: female,
     name: "Kikelomo Ashogbon",
     role: "Technical Officer",
-    bio: "Drives business growth and strategic partnerships.",
+    department: "Operations",
   },
   {
     id: "obinna-okoro",
     imgSrc: obinna,
     name: "Obinna Okoro",
     role: "Business Development",
-    bio: "Drives business growth and strategic partnerships.",
+    department: "Sales",
   },
   {
     id: "karaki-deborah",
     imgSrc: female,
     name: "Karaki Deborah",
     role: "Business Development",
-    bio: "Drives business growth and strategic partnerships.",
+    department: "Sales",
   },
   {
     id: "enirere-adesokan",
     imgSrc: enirere,
     name: "Enirere Adesokan",
     role: "Technical Officer",
-    bio: "Runs operations and ensures delivery excellence.",
+    department: "Operations",
   },
   {
     id: "tofunmi-sulaimon",
     imgSrc: female,
     name: "Tofunmi Sulaimon",
     role: "Graduate Trainee",
-    bio: "Runs operations and ensures delivery excellence.",
+    department: "Development",
   },
   {
     id: "abibat-adeleke",
     imgSrc: female,
     name: "Abibat Adeleke",
     role: "Accounts Officer",
-    bio: "Runs operations and ensures delivery excellence.",
+    department: "Finance",
   },
   {
     id: "susam-samson",
     imgSrc: susam,
     name: "Susam Samson",
     role: "Admin Officer",
-    bio: "Runs operations and ensures delivery excellence.",
+    department: "Administration",
   },
-
   {
     id: "david-edet",
     imgSrc: david,
     name: "David Edet",
     role: "IT Support Officer",
-    bio: "Runs operations and ensures delivery excellence.",
+    department: "Information Technology",
   },
 ];
 
-const TeamMemberCard = ({ member }) => (
-  <div className="col">
-    <div className="card h-100 d-flex flex-column">
-      <img
-        src={member.imgSrc}
-        className="card-img-top team-img"
-        alt={member.name}
-        loading="lazy"
-      />
-      <div className="card-body d-flex flex-column">
-        <h5 className="card-title mb-2">{member.name}</h5>
-        <h6 className="card-subtitle text-muted">{member.role}</h6>
-      </div>
+/**
+ * TeamMemberCard - Displays individual team member information
+ * @component
+ */
+const TeamMemberCard = React.memo(({ member }) => {
+  return (
+    <div className="team-member-card-wrapper">
+      <article className="team-member-card" data-member-id={member.id}>
+        {/* Image Container */}
+        <div className="team-member-image">
+          <img
+            src={member.imgSrc}
+            alt={member.name}
+            className="team-member-photo"
+            loading="lazy"
+            title={member.name}
+          />
+          <div className="team-member-overlay" />
+        </div>
+
+        {/* Content Container */}
+        <div className="team-member-content">
+          <header className="team-member-header">
+            <h3 className="team-member-name">{member.name}</h3>
+            <p className="team-member-role">{member.role}</p>
+          </header>
+
+          <footer className="team-member-footer">
+            <span className="team-member-department">{member.department}</span>
+          </footer>
+        </div>
+      </article>
+    </div>
+  );
+});
+
+TeamMemberCard.displayName = "TeamMemberCard";
+
+/**
+ * SectionHeader - Displays section title
+ * @component
+ */
+const SectionHeader = () => (
+  <div className="team-section-header" data-aos="fade-up">
+    <div className="team-header-content">
+      <h2 className="team-section-title">Other Team Members</h2>
     </div>
   </div>
 );
 
-const OtherTeamMembers = () => {
-  return (
-    <section className="py-5" style={{ overflow: "hidden" }}>
-      <div className="container">
-        {/* Section Header */}
-        <div data-aos="fade-up" className="row mb-5">
-          <div className="col text-center">
-            <h2 className="fw-bold text-dark display-5">Other Team Members</h2>
-          </div>
-        </div>
+/**
+ * TeamGrid - Container for team member cards
+ * @component
+ */
+const TeamGrid = ({ members }) => (
+  <div className="team-grid-wrapper" data-aos="zoom-in">
+    <div className="team-grid">
+      {members.map((member) => (
+        <TeamMemberCard key={member.id} member={member} />
+      ))}
+    </div>
+  </div>
+);
 
-        {/* Team Grid */}
-        <div
-          data-aos="zoom-in"
-          className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4"
-          style={{ overflow: "hidden" }}
-        >
-          {managementTeam.map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
+/**
+ * OtherTeamMembers - Displays team members list with organized layout
+ * @component
+ */
+const OtherTeamMembers = () => {
+  const teamMembers = useMemo(() => TEAM_MEMBERS, []);
+
+  return (
+    <section
+      className="management-team-section"
+      role="region"
+      aria-label="Team Members"
+    >
+      <div className="team-container">
+        <SectionHeader />
+        <TeamGrid members={teamMembers} />
       </div>
     </section>
   );
