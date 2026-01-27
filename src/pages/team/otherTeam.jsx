@@ -8,62 +8,62 @@ import "./Team.css";
 
 // Team members data configuration
 const TEAM_MEMBERS = [
-  {
-    id: "kiklomo-ashogbon",
-    imgSrc: female,
-    name: "Kikelomo Ashogbon",
-    role: "Technical Officer",
-    department: "Operations",
-  },
-  {
-    id: "obinna-okoro",
-    imgSrc: obinna,
-    name: "Obinna Okoro",
-    role: "Business Development",
-    department: "Sales",
-  },
-  {
-    id: "karaki-deborah",
-    imgSrc: female,
-    name: "Karaki Deborah",
-    role: "Business Development",
-    department: "Sales",
-  },
-  {
-    id: "enirere-adesokan",
-    imgSrc: enirere,
-    name: "Enirere Adesokan",
-    role: "Technical Officer",
-    department: "Operations",
-  },
-  {
-    id: "tofunmi-sulaimon",
-    imgSrc: female,
-    name: "Tofunmi Sulaimon",
-    role: "Graduate Trainee",
-    department: "Development",
-  },
-  {
-    id: "abibat-adeleke",
-    imgSrc: female,
-    name: "Abibat Adeleke",
-    role: "Accounts Officer",
-    department: "Finance",
-  },
-  {
-    id: "susam-samson",
-    imgSrc: susam,
-    name: "Susam Samson",
-    role: "Admin Officer",
-    department: "Administration",
-  },
-  {
-    id: "david-edet",
-    imgSrc: david,
-    name: "David Edet",
-    role: "IT Support Officer",
-    department: "Information Technology",
-  },
+    {
+      id: "kiklomo-ashogbon",
+      imgSrc: female,
+      name: "Kikelomo Ashogbon",
+      role: "Technical Officer",
+      department: "Operations",
+    },
+    {
+      id: "obinna-okoro",
+      imgSrc: obinna,
+      name: "Obinna Okoro",
+      role: "Business Development",
+      department: "Sales",
+    },
+    {
+      id: "karaki-deborah",
+      imgSrc: female,
+      name: "Karaki Deborah",
+      role: "Business Development",
+      department: "Sales",
+    },
+    {
+      id: "enirere-adesokan",
+      imgSrc: enirere,
+      name: "Enirere Adesokan",
+      role: "Technical Officer",
+      department: "Operations",
+    },
+    {
+      id: "tofunmi-sulaimon",
+      imgSrc: female,
+      name: "Tofunmi Sulaimon",
+      role: "Graduate Trainee",
+      department: "Development",
+    },
+    {
+      id: "abibat-adeleke",
+      imgSrc: female,
+      name: "Abibat Adeleke",
+      role: "Accounts Officer",
+      department: "Finance",
+    },
+    {
+      id: "susam-samson",
+      imgSrc: susam,
+      name: "Susam Samson",
+      role: "Admin Officer",
+      department: "Administration",
+    },
+    {
+      id: "david-edet",
+      imgSrc: david,
+      name: "David Edet",
+      role: "IT Support Officer",
+      department: "Information Technology",
+    },
 ];
 
 /**
